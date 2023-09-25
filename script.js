@@ -15,7 +15,7 @@ function getWeatherInfo() {
     })
     .then(tolu => {
       let weatherInfo = document.getElementById("weatherInfo");
-      let temperature = tolu.main.temp;
+      let temperature = parseInt(tolu.main.temp - 273);
       let description = tolu.weather[0].description;
       let humidity = tolu.main.humidity;
       let pressure = tolu.main.pressure;
